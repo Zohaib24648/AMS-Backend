@@ -1,0 +1,19 @@
+{
+  "name": "ams-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zohaib24648/AMS-Backend.git"
+  },
+  "author": "Zohaib Mughal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zohaib24648/AMS-Backend/issues"
+  },
+  "homepage": "https://github.com/Zohaib24648/AMS-Backend#readme",
+  "description": ""
+}

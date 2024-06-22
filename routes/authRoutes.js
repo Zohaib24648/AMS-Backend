@@ -1,10 +1,10 @@
 // routes/Common/authRoutes.js
 
 const express = require('express');
-const User = require('../../models/User');
+const User = require('../models/User');
 const router = express.Router();
-const {registerSchema,loginSchema} = require("../../utils/authValidation") 
-const { hashPassword, comparePassword, generateToken } = require("../../utils/authUtils");
+const {registerSchema,loginSchema} = require("../utils/authValidation") 
+const { hashPassword, comparePassword, generateToken } = require("../utils/authUtils");
 
 
 router.post("/register", async (req, res) => {

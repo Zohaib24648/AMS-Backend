@@ -48,6 +48,16 @@ exports.getAllAttendanceRecords = async (req, res) => {
   }
 };
 
+exports.getAllAttendanceRecords = async (req, res) => {
+  try {
+    const today = new Date().toDateString();
+    const attendanceRecords = await Attendance.find({ date: today }).populate('userId', 'name email');
+    res.json(attendanceRecords);
+  } catch (err) {
+    res.status(500).json({ message: 'Server Error', error: err.message });
+  }
+};
+
 // Create a new attendance record
 exports.createAttendance = async (req, res) => {
   const { userId, date, status } = req.body;

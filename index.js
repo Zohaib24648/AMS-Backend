@@ -15,7 +15,7 @@ const attendanceRoutes = require('./routes/attendanceRoutes');
 const leaveRoutes = require('./routes/leaveRoutes');
 const profileRoutes = require('./routes/profileRoutes');
 const adminRoutes = require('./routes/adminRoutes'); 
-const gradeRoutes = require('./routes/gradeRoutes'); 
+const gradeRoutes = require('./routes/gradeCriteriaRoutes'); 
 
 app.use('/api/auth', authRoutes);
 app.use('/api/attendance', attendanceRoutes);

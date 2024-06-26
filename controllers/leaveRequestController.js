@@ -35,6 +35,8 @@ exports.submitLeaveRequest = async (req, res) => {
 exports.getAllLeaveRequests = async (req, res) => {
   try {
     const leaveRequests = await LeaveRequest.find().populate('userId', 'name email');
+    console.log("Leave function called");
+    console.log(leaveRequests)
     res.json(leaveRequests);
   } catch (err) {
     res.status(500).json({ message: 'Server Error', error: err.message });

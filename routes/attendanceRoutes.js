@@ -36,4 +36,7 @@ router.delete('/delete/:id', authMiddleware, adminMiddleware, deleteAttendance);
 router.get('/report', authMiddleware, adminMiddleware, generateAttendanceReport);
 
 
+router.get('/all', authMiddleware, adminMiddleware, getAllAttendanceRecords);
+
+
 module.exports = router;

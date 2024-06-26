@@ -11,3 +11,13 @@ exports.getAllStudents = async (req, res) => {
     res.status(500).json({ message: 'Server Error', error: err.message });
   }
 };
+
+exports.getUserCounts = async (req, res) => {
+  try {
+    const totalUsers = await User.countDocuments({ role: 'user' });
+    const totalAdmins = await User.countDocuments({ role: 'admin' });
+    res.json({ totalUsers, totalAdmins });
+  } catch (err) {
+    res.status(500).json({ message: 'Server Error', error: err.message });
+  }
+};
